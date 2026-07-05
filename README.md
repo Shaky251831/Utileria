@@ -5,11 +5,9 @@
 
 ---
 
-## Descripción del Proyecto 
+## Descripción del Proyecto. 
 
 **Objetivo:** Crear una librería JS funcional (sin frameworks, sin componentes visuales) que se usará en un formulario, modal y login.html.
-
-Este proyecto consiste en resolver validación de formularios, formateo seguro de datos y cálculos basados en fechas, garantizando la consistencia de la información antes de ser procesada o enviada a un servidor.
 
 El proyecto incluye 6 funciones principales:
 
@@ -27,7 +25,7 @@ Las 2 funciones adicionales:
 
 ---
 
-## Instalación
+## Instalación.
 
 Para utilizar esta librería, se agrega esta línea de código dentro de la página HTML:
 
@@ -37,7 +35,7 @@ Para utilizar esta librería, se agrega esta línea de código dentro de la pág
 
 ---
 
-## Código de la librería
+## Código de la librería.
 
 ```javascript
 // 1. Validar formato de correo electrónico
@@ -46,18 +44,18 @@ function validarCorreo(correo) {
     return regex.test(correo);
 }
 
-// 2. Solo letras (mayúsculas/minúsculas, acepta espacios y vocales acentuadas)
+// 2. Solo letras (mayúsculas/minúsculas, acepta espacios y vocales acentuadas).
 function soloLetras(texto) {
     const regex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
     return regex.test(texto);
 }
 
-// 3. Valida la longitud máxima de dígitos de un número
+// 3. Valida la longitud máxima de dígitos de un número.
 function validarLongitud(numero, maxLongitud) {
     return String(numero).length <= maxLongitud;
 }
 
-// 4. Calcula edad exacta a partir de una fecha de nacimiento (YYYY-MM-DD)
+// 4. Calcula edad exacta a partir de una fecha de nacimiento (YYYY-MM-DD).
 function calcularEdad(fechaNacimiento) {
     if (!fechaNacimiento) return 0;
     const hoy = new Date();
@@ -71,12 +69,12 @@ function calcularEdad(fechaNacimiento) {
     return edad;
 }
 
-// 5. Valida si es mayor de edad (18 años o más)
+// 5. Valida si es mayor de edad (18 años o más).
 function esMayorDeEdad(fechaNacimiento) {
     return calcularEdad(fechaNacimiento) >= 18;
 }
 
-// 6. Requiere mayúscula, minúscula, número, carácter especial y mínimo 8 caracteres
+// 6. Requiere mayúscula, minúscula, número, carácter especial y mínimo 8 caracteres.
 function validarPassword(password) {
     const tieneMayuscula = /[A-Z]/.test(password);
     const tieneMinuscula = /[a-z]/.test(password);
@@ -89,12 +87,12 @@ function validarPassword(password) {
 
 // --- Las 2 funciones que agregué ---
 
-// 1. Limpiar espacios al inicio, final y duplicados en medio
+// 1. Limpiar espacios al inicio, final y duplicados en medio.
 function limpiarEspacios(texto) {
     return texto.trim().replace(/\s+/g, ' ');
 }
 
-// 2. Capitalizar la primera letra de cada palabra (formato de nombre propio)
+// 2. Capitalizar la primera letra de cada palabra (formato de nombre propio).
 function capitalizarTexto(texto) {
     return texto.toLowerCase().replace(/\b\w/g, l => l.toUpperCase());
 }
@@ -102,13 +100,13 @@ function capitalizarTexto(texto) {
 
 ---
 
-## Evidencias
+## Evidencias.
 
-### Capturas del formulario
+### Capturas de pantalla (consola mostrando resultados).
 
 ![Evidencia del Formulario 1](img/Imagen1.png)
 ![Evidencia del Formulario 2](img/Imagen2.png)
 
-### Video de demostración
+### Video demostrativo.
 
 https://github.com/user-attachments/assets/6aafbf17-1c98-4b26-8c53-e56a16869e8c 
