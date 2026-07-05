@@ -89,7 +89,7 @@ function validarPassword(password) {
 
 // --- Las 2 funciones que agregué ---
 
-// 1. Limpiar espacios extra al inicio, final y duplicados en medio
+// 1. Limpiar espacios al inicio, final y duplicados en medio
 function limpiarEspacios(texto) {
     return texto.trim().replace(/\s+/g, ' ');
 }
