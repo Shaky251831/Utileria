@@ -5,7 +5,7 @@
 
 ---
 
-## Descripción del Proyecto
+## Descripción del Proyecto 
 
 **Objetivo:** Crear una librería JS funcional (sin frameworks, sin componentes visuales) que se usará en un formulario, modal y login.html.
 
